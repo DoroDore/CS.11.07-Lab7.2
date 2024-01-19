@@ -12,22 +12,22 @@ The ZombiePlant class provides a constructor and the following methods.
 
 The following table contains a sample code execution sequence and the corresponding results. 
 
-| Statements and Expressions                  | Value Returned (blank if no value) | Comment                  |
-| ------------------------------------------- | ---------------------------------- | ------------------------ |
-| ZombiePlant plant = new ZombiePlant(10, 3); |                                    | The plant requires treatments with a potency <= 10. The plant initially needs 3 successful treatments to be cured.             |
-| plant.treatmentsNeeded();                   | 3                                  | The plant has not yet been treated, so it still needs 3 treatments to be cured.             |
-| plant.isDangerous();                        | true                               | The plant still needs at least 1 treatment to be cured, so it is dangerous.
-| plant.treat(7);                             |                                    | The treatment potency is <= 10, so the treatment is successful
-| plant.treatmentsNeeded();                   | 2                                  | The plant now needs 2 successful treatments to be cured.
-| plant.treat(11);                            |                                    | The treatment potency is not <= 10, so the treatment is not successful.
-| plant.treatmentsNeeded();                   | 3                                  | The failed treatment increased the number of successful treatments needed for the plant to be cured by 1.
-| plant.treat(10);                            |                                    | The treatment potency is <= 10, so the treatment is successful.
-| plant.treatmentsNeeded();                   | 2                                  | The plant now needs 2 successful treatments to be cured.
-| plant.isDangerous();                        | true                               | The plant still needs at least 1 treatment to be cured, so it is dangerous. 
-| plant.treat(8);                             |                                    | The treatment potency is <= 10, so the treatment is successful.
-| plant.treat(4);                             |                                    | The treatment potency is <= 10, so the treatment is successful.
-| plant.treatmentsNeeded();                   | 0                                  | The successful treatments reduced the number of treatments needed to 0.
-| plant.isDangerous();                        | false                              | The plant has been cured. It is no longer dangerous. 
-| plant.treat(4);                             |                                    | Additional treatments with a potency <= 10 have no effect.
-| plant.treatmentsNeeded();                   | 0                                  | The additional treatment with a potency <= 10 had no effect.
-| plant.isDangerous();                        | false                              | The plant remains cured.
+| Statements and Expressions                  | Value Returned (blank if no value) | Comment                                                                                                            |
+|---------------------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| ZombiePlant plant = new ZombiePlant(10, 3); |                                    | The plant requires treatments with a potency <= 10. The plant initially needs 3 successful treatments to be cured. |
+| plant.treatmentsNeeded();                   | 3                                  | The plant has not yet been treated, so it still needs 3 treatments to be cured.                                    |
+| plant.isDangerous();                        | true                               | The plant still needs at least 1 treatment to be cured, so it is dangerous.                                        |
+| plant.treat(7);                             |                                    | The treatment potency is <= 10, so the treatment is successful                                                     |
+| plant.treatmentsNeeded();                   | 2                                  | The plant now needs 2 successful treatments to be cured.                                                           |
+| plant.treat(11);                            |                                    | The treatment potency is not <= 10, so the treatment is not successful.                                            |
+| plant.treatmentsNeeded();                   | 3                                  | The failed treatment increased the number of successful treatments needed for the plant to be cured by 1.          |
+| plant.treat(10);                            |                                    | The treatment potency is <= 10, so the treatment is successful.                                                    |
+| plant.treatmentsNeeded();                   | 2                                  | The plant now needs 2 successful treatments to be cured.                                                           |
+| plant.isDangerous();                        | true                               | The plant still needs at least 1 treatment to be cured, so it is dangerous.                                        |
+| plant.treat(8);                             |                                    | The treatment potency is <= 10, so the treatment is successful.                                                    |
+| plant.treat(4);                             |                                    | The treatment potency is <= 10, so the treatment is successful.                                                    |
+| plant.treatmentsNeeded();                   | 0                                  | The successful treatments reduced the number of treatments needed to 0.                                            |
+| plant.isDangerous();                        | false                              | The plant has been cured. It is no longer dangerous.                                                               |
+| plant.treat(4);                             |                                    | Additional treatments with a potency <= 10 have no effect.                                                         |
+| plant.treatmentsNeeded();                   | 0                                  | The additional treatment with a potency <= 10 had no effect.                                                       |
+| plant.isDangerous();                        | false                              | The plant remains cured.                                                                                           |
